@@ -1,0 +1,132 @@
+.navbar{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link li{
+    margin-left: 10px;
+}
+
+/* .nav-link a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: 300;
+    transition: .3s ease;
+
+} */
+
+.nav-link a:hover{
+    color: orangered;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text{
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.logo-text span{
+    color: orangered;
+    font-weight: 600;
+}
+/* a.btn{
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+a.btn-dark{
+    border: 2px solid #fff;
+} */
+
+.menu-icons{
+display: none;
+}
+@media screen and (max-width :650px) {
+    .nav-link{
+        display: none;
+    }
+
+    .menu-icons{
+        display: block;
+        }
+        .navbar #show-linkes-mobile,
+        .navbar #show-linkes-mobile-hide {
+            display: block;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background: #0a1930;
+            width: 100%;
+            border: 2px solid #fff;
+            transition: .3s ease;
+            z-index: 1000;
+
+        }
+        .navbar #show-linkes-mobile li ,
+        .navbar #show-linkes-mobile-hide li{
+            padding: 15px 0;
+            margin: 0 15px;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+        .navbar #show-linkes-mobile li:last-child{
+            border-bottom: 0;
+        }
+
+        .navbar #show-linkes-mobile a{
+            font-size: 17px;
+        }
+
+        .navbar #show-linkes-mobile li a:hover{
+            color: orangered;
+        }
+        .navbar #show-linkes-mobile{
+            animation: slide-in .5s ease-in-out;
+
+        }
+        .navbar #show-linkes-mobile-hide{
+            left: -100%;
+            animation: slide-out .5s ease-in-out;
+        }
+
+        @keyframes slide-in{
+            0%{
+                transform: translateX(-100%);
+
+            }
+            100%{
+                transform: translateX(0%);
+
+            }
+        }
+
+        @keyframes slide-out{
+            0%{
+                transform: translateX(0%);
+
+            }
+            100%{
+                transform: translateX(-100%);
+
+            }
+        }
+
+    
+}
